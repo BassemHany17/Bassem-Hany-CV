@@ -13,9 +13,9 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-weight:300;line-height:1.6;overflow-x:hidden;cursor:none;}
-.cursor{position:fixed;width:10px;height:10px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;}
-.cursor-ring{position:fixed;width:36px;height:36px;border:1px solid var(--gold);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:0.45;}
+body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-weight:300;line-height:1.6;overflow-x:hidden;}
+.cursor{position:fixed;width:12px;height:12px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width 0.2s,height 0.2s;}
+.cursor-ring{position:fixed;width:38px;height:38px;border:1.5px solid var(--gold);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:0.5;transition:width 0.3s,height 0.3s;}
 body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(201,151,58,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,151,58,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0;}
 
 /* NAV */
@@ -40,7 +40,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .metric-value{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;color:var(--white);line-height:1;}
 .metric-label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-top:3px;}
 .hero-cta{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap;opacity:0;animation:fadeUp 0.9s 0.95s forwards;}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.1em;text-decoration:none;transition:all 0.2s;cursor:none;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.1em;text-decoration:none;transition:all 0.2s;}
 .btn-primary{background:var(--gold);color:var(--bg);font-weight:500;}
 .btn-primary:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,151,58,0.35);}
 .btn-ghost{border:1px solid var(--border);color:var(--mid);}
@@ -259,7 +259,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:20
     </div>
     <div class="hero-contact">
       <div class="hc-item">&#128241; <a href="tel:+201008161989">+20 100 816 1989</a></div>
-      <div class="hc-item">&#9993; <a href="mailto:bassem170196@gmail.com">bassem170196@gmail.com</a></div>
+      <div class="hc-item">&#9993; <a href="/cdn-cgi/l/email-protection#f092918383959dc1c7c0c1c9c6b0979d91999cde939f9d"><span class="__cf_email__" data-cfemail="f99b988a8a9c94c8cec9c8c0cfb99e94989095d79a9694">[email&#160;protected]</span></a></div>
       <div class="hc-item">&#128188; <a href="https://www.linkedin.com/in/bassem-hany-393702128/" target="_blank">linkedin.com/in/bassem-hany</a></div>
     </div>
   </div>
@@ -477,16 +477,35 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:20
 <!-- RECOMMENDATIONS -->
 <section id="recommendations" style="background:var(--bg2);">
   <div class="section-header"><span class="section-num">08</span><h2 class="section-title">What People Say</h2><div class="section-line"></div></div>
+  <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">13 Recommendations on LinkedIn</p>
   <div class="recs-grid">
+
     <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">He is the best Mentor I have worked with &mdash; very understandable, patient, and one of the best in the field.</p><div class="rec-divider"></div><div><div class="rec-name">Maya Murray</div><div class="rec-role">Student, American University in Cairo</div><div class="rec-relation">Mentee &middot; Dec 2024</div></div></div>
+
     <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">He's really a brilliant marketer and clever media buyer &mdash; committed and responsible in everything he does.</p><div class="rec-divider"></div><div><div class="rec-name">Diaa Aldin Zahran</div><div class="rec-role">Marketing Technician, CRM Specialist</div><div class="rec-relation">Teammate &middot; Dec 2023</div></div></div>
-    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">A well-organized marketer with extensive knowledge. His diverse expertise in several sectors allows him to quickly adjust to any setting &mdash; a fantastic team player.</p><div class="rec-divider"></div><div><div class="rec-name">Mario Shenouda</div><div class="rec-role">Account Strategist at Snap Inc.</div><div class="rec-relation">Direct Report &middot; Nov 2023</div></div></div>
-    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">A creative senior marketing specialist &mdash; his innovative strategies and collaborative nature greatly enhanced our brand. A dedicated and skilled professional.</p><div class="rec-divider"></div><div><div class="rec-name">Amr El-Houssini</div><div class="rec-role">Data Engineer at IBM</div><div class="rec-relation">Colleague &middot; Nov 2023</div></div></div>
-    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">Bassem is a born marketeer. Talented and creative and an overall sweet person to be around. Hoping you all the best in your career!</p><div class="rec-divider"></div><div><div class="rec-name">Islam Hegazy, MBA</div><div class="rec-role">Assessment Consultant, Phoenix Consulting</div><div class="rec-relation">Teammate &middot; Aug 2023</div></div></div>
-    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">You can really depend on him in boosting your marketing activities. His communication skills, ability to listen, and vast knowledge make everyone excited to work with him.</p><div class="rec-divider"></div><div><div class="rec-name">Ahmed Yassin</div><div class="rec-role">Business Analyst</div><div class="rec-relation">Teammate &middot; Aug 2021</div></div></div>
-    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">Without a doubt someone that would go above and beyond. One of the most dedicated and pure-hearted people I've had the pleasure of working with.</p><div class="rec-divider"></div><div><div class="rec-name">Hana Mohamed</div><div class="rec-role">Former Direct Manager</div><div class="rec-relation">Manager &middot; Feb 2021</div></div></div>
-    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">Bassem is a unique character. He has shown willingness and passion that could drive a person towards SUCCESS!</p><div class="rec-divider"></div><div><div class="rec-name">Omar Husseiny</div><div class="rec-role">Sales and Business Development Leader, 15+ Yrs</div><div class="rec-relation">Manager &middot; Feb 2021</div></div></div>
-    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">Bassem consistently showed a strong desire to learn &mdash; always adding value in class. A highly professional individual as a team member.</p><div class="rec-divider"></div><div><div class="rec-name">Prof. Tarek Ali, Ph.D, FHEA</div><div class="rec-role">Professor of HR Analytics, British University in Egypt</div><div class="rec-relation">Professor &middot; Sep 2020</div></div></div>
+
+    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">A well-organized marketer with extensive knowledge. His diverse expertise in several sectors allows him to quickly adjust to any setting &mdash; a fantastic team player who provides even more value to the team.</p><div class="rec-divider"></div><div><div class="rec-name">Mario Shenouda</div><div class="rec-role">Account Strategist at Snap Inc.</div><div class="rec-relation">Direct Report &middot; Nov 2023</div></div></div>
+
+    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">A creative senior marketing specialist &mdash; his innovative strategies and collaborative nature greatly enhanced our brand. A dedicated and skilled professional who would be an asset to any team.</p><div class="rec-divider"></div><div><div class="rec-name">Amr El-Houssini</div><div class="rec-role">Data Engineer at IBM</div><div class="rec-relation">Colleague &middot; Nov 2023</div></div></div>
+
+    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">Bassem is a born marketeer. Talented and creative and an overall sweet person to be around. Hoping you all the best in your career!</p><div class="rec-divider"></div><div><div class="rec-name">Islam Hegazy, MBA</div><div class="rec-role">Assessment Consultant, Phoenix Consulting International</div><div class="rec-relation">Teammate &middot; Aug 2023</div></div></div>
+
+    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">You can really depend on him in boosting your marketing activities. His communication skills, ability to listen, and vast knowledge are all but a few of the traits that make everyone excited to work with him.</p><div class="rec-divider"></div><div><div class="rec-name">Ahmed Yassin</div><div class="rec-role">Business Analyst</div><div class="rec-relation">Teammate &middot; Aug 2021</div></div></div>
+
+    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">Without a doubt someone that would go above and beyond. One of the most dedicated and pure-hearted people I've had the pleasure of working with. Has a great deal of knowledge and is on a continuous wheel of learning.</p><div class="rec-divider"></div><div><div class="rec-name">Hana Mohamed</div><div class="rec-role">Former Direct Manager</div><div class="rec-relation">Manager &middot; Feb 2021</div></div></div>
+
+    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">Bassem is a unique character. Despite the short period we worked together he has shown willingness and passion that could drive a person towards SUCCESS!</p><div class="rec-divider"></div><div><div class="rec-name">Omar Husseiny</div><div class="rec-role">Sales &amp; Business Development Leader, 15+ Yrs</div><div class="rec-relation">Manager &middot; Feb 2021</div></div></div>
+
+    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">Bassem is an active, creative and hard-working individual. He thinks outside the box and has a unique approach to almost everything. This is perfect for his working field; marketing.</p><div class="rec-divider"></div><div><div class="rec-name">Teriam B. Hegazy</div><div class="rec-role">Instructional Designer &amp; Corporate Trainer</div><div class="rec-relation">Studied Together &middot; Dec 2020</div></div></div>
+
+    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">Bassem consistently showed a strong desire to learn &mdash; a ready and regular participant in class discussion, always adding value. I believe he would be a highly professional individual as a teamwork member.</p><div class="rec-divider"></div><div><div class="rec-name">Prof. Tarek Ali, Ph.D, FHEA</div><div class="rec-role">Professor of HR Analytics, British University in Egypt</div><div class="rec-relation">Professor &middot; Sep 2020</div></div></div>
+
+    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">He's a passionate marketer willing to handle different projects. He is the perfect candidate to join a team and support with his creative thoughts.</p><div class="rec-divider"></div><div><div class="rec-name">Amira Swilam</div><div class="rec-role">Back Office Partner at Den VC | Venture Capital</div><div class="rec-relation">Senior Colleague &middot; Sep 2020</div></div></div>
+
+    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">I had the pleasure of working with Bassem for one semester at BUE, collaborating on a marketing project. He is creative and can work well under pressure.</p><div class="rec-divider"></div><div><div class="rec-name">Mohamed M. Gaber, MBA</div><div class="rec-role">Sr. Specialist at Adidas</div><div class="rec-relation">Teammate &middot; Jul 2020</div></div></div>
+
+    <div class="rec-card"><div class="rec-quote">"</div><p class="rec-text">High marketing skills and strong leadership skills that make him stand out in any team environment.</p><div class="rec-divider"></div><div><div class="rec-name">Mostafa Elnagar</div><div class="rec-role">Deputy Manager at KPMG EG</div><div class="rec-relation">Teammate &middot; Jun 2020</div></div></div>
+
   </div>
 </section>
 
@@ -504,7 +523,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:20
     </div>
     <div class="contact-links">
       <a href="tel:+201008161989" class="contact-link"><span class="clink-icon">&#128241;</span><div><div class="clink-label">Phone</div><div class="clink-val">+20 100 816 1989</div></div><span style="margin-left:auto;">&#8594;</span></a>
-      <a href="mailto:bassem170196@gmail.com" class="contact-link"><span class="clink-icon">&#9993;</span><div><div class="clink-label">Email</div><div class="clink-val">bassem170196@gmail.com</div></div><span style="margin-left:auto;">&#8594;</span></a>
+      <a href="/cdn-cgi/l/email-protection#7c1e1d0f0f19114d4b4c4d454a3c1b111d1510521f1311" class="contact-link"><span class="clink-icon">&#9993;</span><div><div class="clink-label">Email</div><div class="clink-val"><span class="__cf_email__" data-cfemail="dbb9baa8a8beb6eaecebeae2ed9bbcb6bab2b7f5b8b4b6">[email&#160;protected]</span></div></div><span style="margin-left:auto;">&#8594;</span></a>
       <a href="https://www.linkedin.com/in/bassem-hany-393702128/" target="_blank" class="contact-link"><span class="clink-icon">&#128188;</span><div><div class="clink-label">LinkedIn</div><div class="clink-val">linkedin.com/in/bassem-hany-393702128</div></div><span style="margin-left:auto;">&#8594;</span></a>
       <div class="contact-link"><span class="clink-icon">&#128205;</span><div><div class="clink-label">Location</div><div class="clink-val">New Cairo, Rehab City &middot; Egypt</div></div></div>
     </div>
@@ -516,10 +535,15 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:20
   <div class="footer-tag">BH // Performance Marketing</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Cursor
-var cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing'),mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+var cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing'),mx=window.innerWidth/2,my=window.innerHeight/2,rx=mx,ry=my;
+document.addEventListener('mousemove',function(e){
+  mx=e.clientX;my=e.clientY;
+  cursor.style.left=mx+'px';cursor.style.top=my+'px';
+  cursor.style.opacity='1';ring.style.opacity='0.5';
+});
+document.addEventListener('mouseleave',function(){cursor.style.opacity='0';ring.style.opacity='0';});
 (function a(){rx+=(mx-rx)*0.11;ry+=(my-ry)*0.11;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
 
 // Skill bars - run on load
@@ -532,15 +556,4 @@ window.addEventListener('load', function(){
 // Cert filters
 document.querySelectorAll('.cert-filter').forEach(function(btn){
   btn.addEventListener('click',function(){
-    document.querySelectorAll('.cert-filter').forEach(function(b){b.classList.remove('active');});
-    btn.classList.add('active');
-    var f=btn.dataset.filter;
-    document.querySelectorAll('.cert-card2').forEach(function(card){
-      if(f==='all'||card.dataset.issuer===f){card.classList.remove('hidden');}
-      else{card.classList.add('hidden');}
-    });
-  });
-});
-</script>
-</body>
-</html>
+    d
